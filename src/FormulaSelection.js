@@ -2,6 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import {createFormulaFromString} from "./Formula";
 
 const formulas = [
+    createFormulaFromString("EaAbAcEd (a ∨ b ∨ c) ∧ (-a ∨ b ∨ d) ∧ (b ∨ -c ∨ -d)"),
     createFormulaFromString("AxEyEt (x ∨ y) ∧ (-t ∨ x)"),
     createFormulaFromString("AxEyEz (x ∨ y ∨ z) ∧ (-z ∨ -x)"),
     createFormulaFromString("EaEbEc (a ∨ b) ∧ (-c ∨ -b)"),

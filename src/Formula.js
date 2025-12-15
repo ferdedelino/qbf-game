@@ -162,22 +162,8 @@ export class Formula {
         return newFormula;
     }
 
-    static createOne() {
-        let quantList = [];
-        quantList.push(new Quantifier(true, 'a'));
-        quantList.push(new Quantifier(false, 'b'));
-        quantList.push(new Quantifier(false, 'c'));
-        quantList.push(new Quantifier(false, 'd'));
-
-        let clauses = [];
-        function lit(s, neg) {
-            return new Literal(s, neg);
-        }
-
-        clauses.push(new Clause([lit('a', false), lit('b', false), lit('b', true)]));
-        clauses.push(new Clause([lit('d', false), lit('b', false)]));
-
-        return new Formula(quantList, clauses);
+    static createDefault() {
+        return createFormulaFromString("EaAbAcEd (a ∨ b ∨ c) ∧ (-a ∨ b ∨ d) ∧ (b ∨ -c ∨ -d)");
     }
 
     getNextQuantifier() {

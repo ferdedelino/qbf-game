@@ -5,7 +5,7 @@ import FormulaButton from "./FormulaButton";
 import FormulaSelection from "./FormulaSelection";
 
 function App() {
-    const [formulas, setFormulas] = useState([Formula.createOne()]);
+    const [formulas, setFormulas] = useState([Formula.createDefault()]);
     const bottomRef = useRef(null);
 
     function getCurrentFormula() {
